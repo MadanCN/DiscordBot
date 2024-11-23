@@ -6,6 +6,8 @@ import random
 import asyncio
 import os
 from dotenv import load_dotenv
+
+# Load environment variables
 load_dotenv()
 
 # Bot Setup
@@ -306,5 +308,6 @@ async def on_command_error(ctx, error):
     else:
         await ctx.send(f"An error occurred: {str(error)}")
 
+# Run the bot
 TOKEN = os.getenv('DISCORD_TOKEN')
 bot.run(TOKEN)
