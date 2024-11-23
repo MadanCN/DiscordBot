@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: weaver-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python weavershand.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
